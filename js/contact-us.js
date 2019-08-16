@@ -62,8 +62,12 @@ jQuery(document).ready(function($){
 	$("#contact-number").keyup(function(event){
 		var contact_number = $("#contact-number").val();
 		if(contact_number.match(starting_number_exp)){
-		    return true;
+		   	$(".contact-msg").html("Valid SG Number");
+			return true;
 		}
+			$(".contact-msg").html("Invalid SG Number");
+			return false;
+		
 	});
 	
 
