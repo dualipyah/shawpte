@@ -71,13 +71,7 @@ jQuery(document).ready(function($){
 			return false;
 		
 	});
-//	
-//	$('.wpcf7-form').ajaxComplete( function(){    
-//      if($(this).hasClass('invalid') || $(this).hasClass('sent')){
-//            alert('correct errors');
-//		  return false;
-//      }
-//    });
+
 
 	
 	function updateCount() {
