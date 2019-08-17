@@ -63,13 +63,21 @@ jQuery(document).ready(function($){
 		var contact_number = $("#contact-number").val();
 		if(contact_number.match(starting_number_exp)){
 		   	$(".contact-msg").html("Valid SG Number");
+			$("#sendmail").attr("disabled", false);
 			return true;
 		}
 			$(".contact-msg").html("Invalid SG Number");
+		 	$("#sendmail").attr("disabled", true);
 			return false;
 		
 	});
-	
+//	
+//	$('.wpcf7-form').ajaxComplete( function(){    
+//      if($(this).hasClass('invalid') || $(this).hasClass('sent')){
+//            alert('correct errors');
+//		  return false;
+//      }
+//    });
 
 	
 	function updateCount() {
@@ -77,6 +85,13 @@ jQuery(document).ready(function($){
 		$('.name-counter').text(cs);
 	}
 	
-	
+	$('.wpcf7-form').submit(function() {
+		//alert ("submitting");
+		var checkCN = $('#contact-number').val();
+		
+		console.log (checkCN);
+
+		
+	});	
 	
 });
